@@ -1,0 +1,80 @@
+{% extends 'lamblog.html' %}
+
+{% block body %}
+
+<header>
+    <h1>
+        Tuple trong Python
+    </h1>
+</header>
+        <hr size="2px" color="red" />
+<nav>
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="http://127.0.0.1:5000/helloword">1. Chương trình Hello Word!</a></li>
+    <li><a href="http://127.0.0.1:5000/bientrongpython">2. Biến trong Python</a></li>
+    <li><a href="http://127.0.0.1:5000/string">3. String</a></li>
+    <li><a href="http://127.0.0.1:5000/list">4. List</a></li>
+    <li><a href="http://127.0.0.1:5000/tuple">5. Tuple</a></li>
+    <li><a href="http://127.0.0.1:5000/dictionary">6. Dictionary</a></li>
+    <li><a href="http://127.0.0.1:5000/hamtrongpython">7. Hàm trong Python</a></li>
+  </ul>
+</nav>
+<article>
+    <p>
+	Tuple trong Python là các phần tử đưọc đặt trong dấu ( ) , như ở <a href="http://127.0.0.1:5000/bientrongpython">bientrongpython</a> đã nói .
+    </p>
+    <pre>
+    	Một Tuple là một dayc các đối tưọng không thay đổi , vì thế Tuple không thể bị thay đổi .
+              Ví dụ :
+                  tup1 = (1 , 2 , 3 , 4 , 5 )
+                  tup2 = ('a' , 6 , 7 , 8.5 , "Hope")
+                  print tup1
+                  print tup2
+                      --> (1 , 2 , 3 , 4 , 5 )
+                             ('a' , 6 , 7 , 8.5 , "Hope")
+              Các tuple có thể lồng vào với nhau :
+                  tupe1 = (1,2,3,4)
+                  tupe2 = tupe1 , (5,6,7,8)
+                  print tupe2
+                      --> ((1,2,3,4) , (5,6,7,8))
+
+              Lấy phần tử trong tuple :
+                  mon = ('com' , 'canh' , 'rau' , 'muong')
+                  print(mon[1])          # Lấy ở vị trí thứ 0
+                  print(mon[0 : 3])     # Lấy từ vị trí 0 tới vị trí 2
+                      --> canh
+                            ['com' , 'canh' , 'rau']
+
+              Tuple sử dụng toán tử cộng , nhận :
+                  a = ( 1 , 2 , 3 , 4 )
+                  b = ('x' , 'y' , 'z')
+                  c = ( 10 , 20 , 30 )
+                  print (a + b)
+                  print (c*3) 
+                      --> ( 1 , 2 , 3 , 4  , 'x' , 'y' , 'z' )
+                            ( 10 , 20 , 30 , 10 , 20 , 30 , 10 , 20 , 30 )
+
+              Không thể xóa phần tử đơn trong chuỗi của tuple , chỉ có thể xóa cả chuỗi :
+                  Ví dụ : tuple = (10,20,30,'Hope')
+                              del tuple
+                                  --> # Sẽ xóa dữ liệu của tuple
+              Và một khi đã xóa thì không lấy lại được , nếu bạn tiếp tục in tuple sẽ báo lỗi .
+              Khi một tập hợp gồm nhiều đối tượng , phân biệt bởi dấu phẩy , và không có ký hiệu nhận diện như [ ] , {} , () ,... thì mặc định Python coi chúng là tuple .
+
+              Một số hàm được xây dựng sẵn để xử lý tuple trong Python :
+                  + Hàm cmp(tuple1 , tuple2) : So sánh 2 tuple với nhau .
+                  + Hàm len(tuple) : Trả về độ dài của tuple .
+                  + Hàm max(tuple) : Trả về item có gía trị lớn nhất trong tuple .
+                  + Hàm min(tuple) : Trả về gía trị nhỏ nhất trong tuple .
+                  + Hàm tuple(seq) : Chuyển đổi một dãy thành tuple .
+    </pre>
+    </pre>
+    <div align="center">
+        <a href="http://127.0.0.1:5000/dictionary">Trang sau</a>
+     </div>
+</article>
+<footer>
+<a class="facebook" href="https://www.facebook.com/Kirito1801" target="_blank"><i class="fa fa-facebook" style="font-size: 24px; color:maroon; text-shadow:2px 2px 4px #000000;""></i></a>&nbsp; &nbsp; &nbsp;<a class="gplus" href="https://plus.google.com/u/1/discover" target="_blank"><i class="fa fa-google-plus"  style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a> &nbsp; &nbsp;<a class="youtube" href="https://www.youtube.com/channel/UCWrFW58KlMxaNoDNpTxkI9g?view_as=subscriber" target="_blank"><i class="fa fa-youtube" style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a>
+</footer>
+{% endblock %}

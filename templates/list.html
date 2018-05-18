@@ -1,0 +1,122 @@
+{% extends 'lamblog.html' %}
+
+{% block body %}
+<header>
+    <h1>
+        List trong Python 
+    </h1>
+</header>
+            <hr size="2px" color="red" />
+
+<nav>
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="http://127.0.0.1:5000/helloword">1. Chương trình Hello Word!</a></li>
+    <li><a href="http://127.0.0.1:5000/bientrongpython">2. Biến trong Python</a></li>
+    <li><a href="http://127.0.0.1:5000/string">3. String</a></li>
+    <li><a href="http://127.0.0.1:5000/list">4. List</a></li>
+    <li><a href="http://127.0.0.1:5000/tuple">5. Tuple</a></li>
+    <li><a href="http://127.0.0.1:5000/dictionary">6. Dictionary</a></li>
+    <li><a href="http://127.0.0.1:5000/hamtrongpython">7. Hàm trong Python</a></li>
+  </ul>
+</nav>
+
+<article>
+    <p>
+    	List trong Python là các phần tử đưọc đặt trong dấu [ ] , như ở phần<a href="http://127.0.0.1:5000/bientrongpython">bientrongpython</a> đã nói .
+    </p>
+    <h5>Cú pháp tạo List :</h5>
+    <p>< ten_list > = [giatri1 , giatri2 , ... , giatriN] </p>
+    <p>
+    	Một số hàm và phương thức đã xây dựng sẵn để xử lý List trong Python :  
+    	<pre>
+    		Ví dụ : Cho list a = [1,2,3,4,5,"Hope"]
+    		len(a) : Lấy ra chiều dài của a
+    		    --> 6
+    		a[index] : Lấy ra phần tử trong a ở vị trí thứ index .
+    		    a[2] 
+    		        --> 3
+    		    a[5] 
+    		        --> Hope
+    		a = a + a :  Tăng gấp đôi danh sách list .
+    		    --> [1,2,3,4,5,"Hope",1,2,3,4,5,"Hope"]
+    		a[index] = val : Cập nhật vị trí thứ index trong chuỗi bằng gía trị val .
+    		    a[2] = 6
+    		        --> [1,2,6,4,5,"Hope"]
+    		a[ : to] : Lấy ra trong a từ vị trí 0 tới vị trí to - 1 .
+    		    a[ : 5]
+    		        --> [1,2,3,4,5]
+    		a.append (val) : Thêm vào trong list phần tử val .
+    		    a.append (7)
+    		        --> [1,2,3,4,5,"Hope",7]
+    		a.insert(index,val) : Thêm phần tử vị trí thứ index bằng phần tử val .
+    		    a.insert (2,6)
+    		        -->[1,2,6,3,4,5,"Hope"]
+    		a.pop (index) : Xóa phần tử ở vị trí index .
+    		    a.pop (2) 
+    		        --> [1,2,4,5,"Hope"]
+    		a.count (val) : Đếm số lần xuất hiện của phần tử trong chuỗi .
+    		    a = [1,2,4,3,5,6,4,3,5,7,2,"Hope"]
+    		    a.count (2)
+    		        --> 2
+    		    a.count (1)
+    		        --> 1
+    		a.sort () : Sắp xếp chuỗi theo thứ tự tăng dần .
+    		    a = [4,6,3,7,6,1,2,8,7,9]
+    		        --> [1,2,3,4,6,7,7,8,9]
+    		a.reverse () : Đảo ngược vị trí phần tử .
+    		    a = [1,4,6,8]
+    		        --> [8,6,4,1]
+    		del a[from : to] : Xóa phần tử trong a từ vị trí from tới vị trí to -1 .
+    		    a = [1,2,3,4,5,"Hope"]
+    		    del a[1 : 4]
+    		        --> [1,5,"Hope"]
+
+
+    	</pre>
+    </p>
+    <h3>
+    	Một số bước rút gọn để tối ưu mã nguồn 
+    </h3>
+             <pre>
+             	             Ví dụ 1 : In ra một list  các số từ 1 tới 10 và mũ 2 chúng lên :
+             	             Cách 1 :
+             	             a = [ ]
+             	             for b in range (11) :
+             	                 a.append (b**2)
+             	             print a
+             	                 --> [0,1,4,9,16,25,36,49,64,81,100]
+             	             Bên trên mình có dùng tới vòng lặp for , mình sẽ giới thiệu bài này ở phần sau .
+             	             Cách rút gọn :
+             	             print([a**2 for a in range (11)])
+             	                 --> [0,1,4,8,16,25,36,49,64,81,100]
+                           Ví dụ 2 : In các gía trị từ 0 tới 100 và lấy ra các gía trị chia hết cho 2 :
+                           Cách 1 :
+                           a = [ ]
+                           for b in range (1,101) :
+                               if b % 2 == 0 :
+                                   a.append (b)
+                           print a
+                               --> [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100]
+                           Cách 2 :
+                           a = [b for b in range (0,101) if b % 2 =0]
+                           print a
+                               --> [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100]
+                           Ví dụ 3 : Cho 2 list và muốn nối các list lại với nhau
+                           la = [1,2,3]
+                           lb = [4,5,6]
+                           lc = [(x,y) for x in la for y in lb]
+                           print (lc)
+                               --> [(1,4) , (1,5) , (1,6) , (2,4) , (2,5) , (2,6) , (3,4) , (3,5) , (3,6)]
+
+             </pre>
+    <div align="center">
+        <a href="http://127.0.0.1:5000/tuple">Trang sau</a>
+     </div>
+</article>
+
+<footer>
+<a class="facebook" href="https://www.facebook.com/Kirito1801" target="_blank"><i class="fa fa-facebook" style="font-size: 24px; color:maroon; text-shadow:2px 2px 4px #000000;""></i></a>&nbsp; &nbsp; &nbsp;<a class="gplus" href="https://plus.google.com/u/1/discover" target="_blank"><i class="fa fa-google-plus"  style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a> &nbsp; &nbsp;<a class="youtube" href="https://www.youtube.com/channel/UCWrFW58KlMxaNoDNpTxkI9g?view_as=subscriber" target="_blank"><i class="fa fa-youtube" style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a>
+</footer>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'lamblog.html' %}
+
+{% block body %}
+<header>
+    <h1>
+        Dictionary trong Python
+    </h1>
+</header>
+            <hr size="2px" color="red" />
+
+<nav>
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="http://127.0.0.1:5000/helloword">1. Chương trình Hello Word!</a></li>
+    <li><a href="http://127.0.0.1:5000/bientrongpython">2. Biến trong Python</a></li>
+    <li><a href="http://127.0.0.1:5000/string">3. String</a></li>
+    <li><a href="http://127.0.0.1:5000/list">4. List</a></li>
+    <li><a href="http://127.0.0.1:5000/tuple">5. Tuple</a></li>
+    <li><a href="http://127.0.0.1:5000/dictionary">6. Dictionary</a></li>
+    <li><a href="http://127.0.0.1:5000/hamtrongpython">7. Hàm trong Python</a></li>
+  </ul>
+</nav>
+
+
+<article>
+              <p>
+             Tuple trong Python là các phần tử đưọc đặt trong dấu { } , như ở <a href="http://127.0.0.1:5000/bientrongpython">bientrongpython</a> đã nói .
+            <p> Dictionary là một tập hợp các cặp key và value không có thứ tự . Mỗi cặp key-value được xem như là một item . Key mà đã truyền cho value đó phải là duy nhất , trong khi đó value có thể là bất kỳ gía trị nào và key không được thay đổi ( Nghe như chày và cối :D ) .
+
+            <p> Key và value được phân biệt riêng rẽ bởi một dấu hai chấm (:). Các item phân biệt nhau bởi một dấu phảy (,). Các item khác nhau được bao quanh bên trong một cặp dấu ngoặc móc đơn tạo nên một Dictionary trong Python .
+              </p>
+              </p>
+              </p>
+     <pre>
+      Ví dụ : dic = {'Hope' : 9 , 'Huong' : 10 , 'Quang' : 8}
+                  print dic
+                      --> {'Hope' : 9 , 'Huong' : 10 , 'Quang' : 8}            
+      </pre>
+      <h3>Các thuộc tính của key trong Dictionary </h3>
+      <pre>
+      	Mỗi một Dictionary không cho phép 2 key có tên giống nhau cùng tồn tại , nếu trùng nó sẽ chạy in ra key nằm ở cuối cùng .
+              Ví dụ : dict = {'Ten' : 'Nam' , 'Tuoi' : 27 , 'Ten' : 'Hope'}
+                          print "dict['Ten']"
+                              --> dict['Ten'] : Hope
+
+              Chỉ có thể sử dụng chuỗi , số , hoặc tuple làm key của Dictionary , nếu là một cái gì đó khác sẽ báo lỗi .
+                  Ví dụ không thể sử dụng List làm key 
+                  dic = {['Ten'] : 'Quang' }
+                  Nếu chạy sẽ báo lỗi .
+      </pre>
+      <pre>
+      	Một số hàm sử lí Dictionary trong Python :
+      	    + len (dict) : Đếm tổng số phần tử trong dict .
+      	    + del dict [key] : Xóa phần tử key trong dict .
+      	    + dict.keys ( ) : Lấy ra khóa của dict .
+      	    + dict.values ( ) : Lấy ra gía trị của dict .
+      	    + dict.items ( ) : Hiển thị đầy đủ keys và values của dict .
+      </pre>
+     <div align="center">
+        <a href="http://127.0.0.1:5000/hamtrongpython">Trang sau</a>
+     </div>
+</article>
+
+
+<footer>
+<a class="facebook" href="https://www.facebook.com/Kirito1801" target="_blank"><i class="fa fa-facebook" style="font-size: 24px; color:maroon; text-shadow:2px 2px 4px #000000;""></i></a>&nbsp; &nbsp; &nbsp;<a class="gplus" href="https://plus.google.com/u/1/discover" target="_blank"><i class="fa fa-google-plus"  style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a> &nbsp; &nbsp;<a class="youtube" href="https://www.youtube.com/channel/UCWrFW58KlMxaNoDNpTxkI9g?view_as=subscriber" target="_blank"><i class="fa fa-youtube" style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a>
+</footer>
+
+{% endblock %}

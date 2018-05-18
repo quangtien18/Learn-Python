@@ -1,0 +1,56 @@
+{% extends 'lamblog.html' %}
+
+{% block body %}
+<header>
+    <h1>
+        Cài đặt Python
+    </h1>
+</header>
+            <hr size="2px" color="red" />
+
+<nav>
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="http://127.0.0.1:5000/helloword">1. Chương trình Hello Word!</a></li>
+    <li><a href="http://127.0.0.1:5000/bientrongpython">2. Biến trong Python</a></li>
+    <li><a href="http://127.0.0.1:5000/string">3. String</a></li>
+    <li><a href="http://127.0.0.1:5000/list">4. List</a></li>
+    <li><a href="http://127.0.0.1:5000/tuple">5. Tuple</a></li>
+    <li><a href="http://127.0.0.1:5000/dictionary">6. Dictionary</a></li>
+    <li><a href="http://127.0.0.1:5000/hamtrongpython">7. Hàm trong Python</a></li>
+  </ul>
+</nav>
+
+<article>
+    <div class="container">
+        <p>Đầu tiên bạn phải tải Python về,bạn vào trang : <a href="https://www.python.org/">python.org</a></p>
+        <p>Bạn vào phần Downloads và tải về python bản mới nhất , hiện tại là bản 3.6.5</p>
+        <p>Nếu bạn dùng hệ điều hành window thì tải về như trên sau đó giải nén ra và chạy file . Bạn mở phần tìm kiếm trong cửa sổ window gõ python chạy file và bắt đầu sử dụng python .</p>
+        <p>Nếu bạn dùng hệ điều hành ubuntu , bạn mở terminal lên và gõ lệnh : </p>
+        <p>apt-get install python</p>
+        <p>Enter và gõ password máy tính của bạn vào , khí đó máy sẽ tự tải và cài đặt python cho bạn . Sau khi cài đặt xong bạn gõ python nó sẽ hiện ra >>> , tức là bạn đã cài thành công và bắt đầu sử dụng python .</p>
+        <p>Mình đang dùng hệ điều hành ubuntu , ubuntu sẽ cho bạn cảm giác giống như một lập trình viên , tức là đa số các thao tác của bạn sẽ là gõ lệnh nhưng cũng yêu cầu bạn cũng phải học lệnh . Điều cần biết thêm là nếu bạn có chơi game trên máy tính thì hãy dùng hệ điều hành window vì ubuntu không hỗ trợ nhiều trong việc chơi game . Mình đã phải bỏ chơi game rất nhiều từ khi học lập trình , mặc dù game là món ăn tinh thần của mình :*( .</p>
+        <p>Tại đây mình cũng giới thiệu thêm một ứng dụng rất hữu ích và mình nghĩ là nên có , đó là <i>sublime text 3</i></p>
+        <p>Bạn click <a href="https://www.sublimetext.com/3" target="_blank">vào đây</a> để tải sublime text về .
+        <p>Tại sao nên dùng Sublime text , bởi vì :</p>
+        <ul style="list-style-type: circle; list-style-position:inside;">
+            <li>Là phần mềm trả phí, nhưng cho phép dùng thử vô thời hạn.</li>
+            <li>Chạy quá nhẹ khởi động nhanh, tốn ít tài nguyên so với một full IDE mà vẫn thường được dùng.</li>
+            <li>Hỗ trợ trên các hệ điều hành phổ biến như Windows, Mac OS và các bản phân phối của Linux như Ubuntu, Linux Mint,...</li>
+            <li>Có một giao diện người dùng trực quan, dễ dàng tùy biến, rất bắt mắt.</li>
+            <li>Hỗ trợ nhận diện và tô màu từ khoá (syntax highlight) cho hơn 20 ngôn ngữ khác nhau chẳng hạn như HTML, CSS, Javascript, C++, C#, SQL, XML ….</li>
+            <li>Bạn có thể thêm những tính năng mới thông qua việc cài đặt Plugin hay Package (hoàn toàn miễn phí).</li>
+        </ul>
+        <p>Khi đã cài đặt xong mọi thứ và bắt đầu sử dụng , ban đầu sẽ hơi khó khăn nhưng rồi sẽ quen thôi . Chúc bạn thành công .</p>
+
+    </div>
+    <div align="center">
+            <a href="http://127.0.0.1:5000/helloword">Trang sau</a>
+     </div>
+</article>
+
+
+<footer>
+<a class="facebook" href="https://www.facebook.com/Kirito1801" target="_blank"><i class="fa fa-facebook" style="font-size: 24px; color:maroon; text-shadow:2px 2px 4px #000000;""></i></a>&nbsp; &nbsp; &nbsp;<a class="gplus" href="https://plus.google.com/u/1/discover" target="_blank"><i class="fa fa-google-plus"  style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a> &nbsp; &nbsp;<a class="youtube" href="https://www.youtube.com/channel/UCWrFW58KlMxaNoDNpTxkI9g?view_as=subscriber" target="_blank"><i class="fa fa-youtube" style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a>
+</footer>
+{% endblock %}

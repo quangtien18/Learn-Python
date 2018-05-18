@@ -1,0 +1,163 @@
+{% extends 'lamblog.html' %}
+
+{% block body %}
+ <header>
+    <h1>
+        String trong Python
+    </h1>
+</header>
+            <hr size="2px" color="red" />
+
+<nav>
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="http://127.0.0.1:5000/helloword">1. Chương trình Hello Word!</a></li>
+    <li><a href="http://127.0.0.1:5000/bientrongpython">2. Biến trong Python</a></li>
+    <li><a href="http://127.0.0.1:5000/string">3. String</a></li>
+    <li><a href="http://127.0.0.1:5000/list">4. List</a></li>
+    <li><a href="http://127.0.0.1:5000/tuple">5. Tuple</a></li>
+    <li><a href="http://127.0.0.1:5000/dictionary">6. Dictionary</a></li>
+    <li><a href="http://127.0.0.1:5000/hamtrongpython">7. Hàm trong Python</a></li>
+  </ul>
+</nav>
+
+<article>
+    <p>
+    	String ( Chuỗi ) được đặt trong ngoặc đơn ' ' , ''' ''' , hoặc ngoặc kép " " , """ """ .
+    </p>
+    <p>Khi viết ta dùng ngoặc nào cũng được . Trong một số trường hợp như viết tiếng anh bạn muốn in ra cả dấu ' , khi đó ta dùng dấu " bên ngoài </p>
+    <pre>
+    	Ví dụ :
+    	    str = "I'm beginer"
+    	    print (str)
+
+    	Khi đó sẽ trả kết quả cho ta là :
+    	    I'm beginer
+    </pre>
+    <p>Toán tử nối chuỗi :Sử dụng để nối hai chuỗi với nhau tạo lên một chuỗi mới .</p>
+    <pre>
+    	a = "Quang"
+    	b = "Tiền"
+    	print (a+b)
+    	    Kết quả trả ra : "QuangTiền"
+    </pre>
+    <p>Không thể dùng ví dụ trên với một gía trị số và một gía trị chuỗi , nhưng có thể xử dụng phép tính nhân </p>
+    <pre>
+    	Ví dụ : print(3*"Hope")
+    	Kết quả trả ra là : "HopeHopeHope"
+    </pre>
+    <p>
+    <font size="4">Các hàm xử lí với string :</font>
+    <p>Cho một chuỗi :</p>
+    <p>str = hello word </p>
+    <pre>
+    	+ type(str) : Kiểm tra xem str thuộc kiểu dữ liệu nào string , list , tuple , dictionary 
+    	print(type(str))
+    	Kết quả trả ra là : < type 'str' > 
+    	+ len(str) : Lấy ra chiều dài của chuỗi , trong chuỗi có bao nhiêu phần tử kể cả khoảng trắng
+    	print (len(str))
+    	Kết quả trả ra là : 10
+    	+ str[ index ] : Lấy ra phần tử ở vị trí thứ index trong chuỗi .
+    	print(str[4])
+    	Kết quả trả ra là : o
+    	Tại sao là "o" vì khi đếm phần tử ta sẽ đếm từ phần tử 0 tới phần tử N trong chuỗi , đếm từ trái qua phải h-0 , e-1 ,l-2 , l-3 , o-4 , 'khoảng cách'-5 , w-6 , ....Như vậy ta có kết quả là "o" .
+    	+ str[from : to] : Lấy ra phần tử từ vị trí from tới vị trí ( to trừ đi 1 ) .
+    	print(str[3:8])
+    	Kết quả trả ra là : lo wo
+    	Tức là lấy kết quả từ vị trí 3 tới vị trí 7 .
+    	+ str[from : ] : Lấy ra phần tử từ vị trí from tới hết .
+    	print(str[2 :])
+    	Kết quả trả ra là : llo word
+    	+ str[ : to] : Lấy ra từ phần tử ban đầu tới ( to -1 ) .
+    	print(str[ : 3])
+    	Kết quả trả ra là : hel
+    </pre>
+    <font size="5">Toàn tử với kết quả True hoặc False </font>
+    <pre>
+    	Ví dụ :
+    	str1 = "Ta Quang Tien"
+    	str2 = "Ta"
+    	str3 = "Hope"
+    	print(str2 in str1)
+    	    Kết quả trả ra là : True
+    	print(st3 in st1)
+    	    Kết quả trả ra là : False
+    	Tức là ở đây hiểu rằng str2 và str3 có tồn tại trong str1 hay không , nếu đúng kết quả trả ra là True , còn sai sẽ là False .
+    	Hoặc có thể dùng trong phép so sánh 2 gía trị .
+    </pre>
+    <h3>Toán tử định dạng chuỗi trong Python </h3>
+    <pre>
+    	Chúng ta quan tâm tới toán tử dạng chuỗi % , toán tử này là duy nhất cho String :
+                  Ví dụ : print "Tôi tên %s và tôi cao %d cm" %("Hope" , 175)
+                      --> Tôi tên Hope và tôi cao 175 cm
+    </pre>
+    <p>
+    	Dưới đây là danh sách các biểu tượng có thể sử dụng với toán tử % :
+    </p>
+    <ul style="list-style-type: circle; list-style-position:inside;">
+             <li>%c : Kí tự</li>
+             <li>%s : Chuyển đổi thành chuỗi thông qua hàm str() trước khi định dạng</li>
+             <li>%i : Số  nguyên thập phân có dấu</li>
+             <li>%d : Số nguyên thập phân có dấu</li>
+             <li>%u : Số nguyên thập phân không dấu</li>
+             <li>%o : Số nguyên hệ bát phân</li>
+             <li>%x : Số nguyên hệ thập lục phân ( các chữ cái thường )</li>
+             <li>%X : Số nguyên hệ thập lục phân ( các chữ cái hoa )</li>
+             <li>%e : Ký hiệu số mũ ( với chữ thường 'e' )</li>
+             <li>%E : Ký hiệu số mũ ( với chữ hoa 'E' )</li>
+             <li>%f : Số thực dấu chấm động</li>
+             <li>%g : Viết gọn của %f và %e</li>
+             <li>%G : Viết gọn của %f và %E</li>
+    </ul>
+    <p>Một số phương thức để xử lí string trong Python :</p>
+        <pre>
+        	Cho chuỗi a = "Tạ Quang Tiền"
+        	    a.capitalize () : In hoa chữ cái đầu tiên trong chuỗi .
+        	        --> Tạ quang tiền
+        	    a.upper () : In hoa toàn bộ chuỗi
+        	        --> TẠ QUANG TIÊN
+        	    a.lower () : In thường toàn bộ chuỗi
+        	        --> tạ quang tiền
+        	    a.swapcase () : Chuyển hoa thành thường , thường thành hoa .
+        	        --> tẠ qUANG tIÊN 
+        	    a.ljust (20 , '*'') : Thêm vào bên phải phần tử * và chuỗi mới có chiều dài 20 kí tự kể cả chuỗi ban đầu .
+        	        --> Tạ Quang Tiền ******
+        	        Phần tử * cũng có thể thay bằng các phần tử khác như @ , $ , ^, ... .
+        	    a.rjust (20 , '*') : Thêm vào bên trái phần tử * và chuỗi mới có chiều dài 20 kí tự kể cả chuỗi ban đầu .
+        	        --> ******* Tạ Quang Tiền
+        	    a.center (20 , '*') : Thêm vào bên phải và bên trái chuỗi kí tự * và chuỗi mới có chiều dài 20 kí tự kể cả chuỗi bạn đầu .
+        	         --> *** Tạ Quang Tiền ****
+        	     a.lstrips () : Hủy bỏ khoảng trắng hoặc kí tự bên trái chuỗi .
+        	         Ví dụ : a = "     Tạ Quang Tiền"
+        	                     print (a.lstrip ())
+        	                     --> Tạ Quang Tiền
+        	     a.rstrip () : Hủy bỏ khoảng trắng hoặc kí tự bên phải chuỗi .
+        	     a.strip () : Hủy bỏ khaongr trắng hoặc kí tự hai bên chuỗi .
+        	     a.split () : Cắt chuỗi dựa vào khoảng trắng .
+        	         a = "Tạ Quang Tiền"
+        	         print(a.split ())
+        	         -->["Tạ" , "Quang" , "Tiền"]
+        	     a.split ('Q') : Cắt chuỗi dựa vào kí tự .
+        	         --> ["Tạ" , "uang Tiền" ]
+        	     a.join (list) : Gộp list chuỗi , chia từng chữ vào chuỗi .
+        	     Với a.ljust () , a.rjust () , a.center () chúng ta có thể thay bằng hàm format :
+        	         Ví dụ :
+        	             print ('{*< 20}'.format("Tạ Quang Tiền"))
+        	             print ('{*> 20}'.format("Tạ Quang Tiền"))
+        	             print ('{*^ 20}'.format("Tạ Quang Tiền"))
+                           --> Tạ Quang Tiền *******
+                           --> ******* Tạ Quang Tiền
+                           --> *** Tạ Quang Tiền ****
+
+        </pre>
+
+        <div align="center">
+            <a href="http://127.0.0.1:5000/list">Trang sau</a>
+        </div>
+</article>
+
+<footer>
+<a class="facebook" href="https://www.facebook.com/Kirito1801" target="_blank"><i class="fa fa-facebook" style="font-size: 24px; color:maroon; text-shadow:2px 2px 4px #000000;""></i></a>&nbsp; &nbsp; &nbsp;<a class="gplus" href="https://plus.google.com/u/1/discover" target="_blank"><i class="fa fa-google-plus"  style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a> &nbsp; &nbsp;<a class="youtube" href="https://www.youtube.com/channel/UCWrFW58KlMxaNoDNpTxkI9g?view_as=subscriber" target="_blank"><i class="fa fa-youtube" style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a>
+</footer>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'lamblog.html' %}
+
+{% block body %}
+<header>
+    <h1>
+        Chương trình Hello word trong Python
+    </h1>
+</header>
+            <hr size="2px" color="red" />
+<nav>
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="http://127.0.0.1:5000/helloword">1. Chương trình Hello Word!</a></li>
+    <li><a href="http://127.0.0.1:5000/bientrongpython">2. Biến trong Python</a></li>
+    <li><a href="http://127.0.0.1:5000/string">3. String</a></li>
+    <li><a href="http://127.0.0.1:5000/list">4. List</a></li>
+    <li><a href="http://127.0.0.1:5000/tuple">5. Tuple</a></li>
+    <li><a href="http://127.0.0.1:5000/dictionary">6. Dictionary</a></li>
+    <li><a href="http://127.0.0.1:5000/hamtrongpython">7. Hàm trong Python</a></li>
+  </ul>
+</nav>
+<article>
+    <p>Chương trình " Hello word " hay " Xin chào thế giới " là chương trình máy tính mà đầu ra là dòng chữ " Hello word ! " trên thiết bị hiển thị . Vì đây là chương trình đơn giản nhất ở mọi ngôn ngữ lập trình , cho nên nó thường được dùng trong việc mô phỏng cho người mới bắt đầu về cú pháp lập trình cơ bản trong ngôn ngữ lập trình .</p>
+    <p>Sau đây là chương trình trong Python để in "Hello word !"</p>
+    <p>Bạn mở sublime text hoặc python lên tạo một file mới ví dụ với tên test.py và lưu lại , ở đây mình dùng sublime text , bạn gõ một đoạn sau :</p>
+    <div  style="text-indent: 1cm;">
+        <p>a = "Hello word !"</p>
+        <p>print a</p>
+    </div>
+    <p>Sau đó bạn gõ ctrl B và chạy với python bạn sẽ thấy kết quả hiện dưới bảng là :</p>
+    <div  style="text-indent: 1cm;">
+        <p>Hello word !</p>
+        <p>[Finished in 0.1s]</p>
+    </div>
+    <p>Hoặc sau khi gõ code xong bạn nhấn ctrl S để lưu lại , mở terminal trên linux lên , chạy tới folder (dùng lệnh cd) chứa file test.py trên và gõ lệnh python test.py cũng hiện kết quả là Hello word ! .</p>
+    <p>Như vậy là bạn đã vừa chạy xong một đoạn code với python .</p>
+    <p>Giải thích đoạn code trên : Tai đây bạn gán một biến a với gía trị là " Hello word ! " giống như trong toán học vậy a = 1 , b = 2 , x = y , .... Sau đó bạn muốn in gía trị của a ra và lúc này ta dùng lệnh print ( Trong tiếng anh là in ra ) , và khi theo đúng cú pháp ta sẽ có kết quả như ý .</p>
+    <p>Bạn cũng có thể không cần gán với một gía trị nào và viết trực tiếp là print (" Hello word !") cũng sẽ trả cho bạn kết quả như trên .</p>
+    <p>Như vậy bạn vừa chạy xong một chương trình thế giới nhé :D . Phần tiếp theo mình sẽ nói về các cú pháp cơ bản trong python .</p>
+
+    <div align="center">
+            <a href="http://127.0.0.1:5000/bientrongpython">Trang sau</a>
+     </div>
+</div>
+</article>
+<footer>
+<a class="facebook" href="https://www.facebook.com/Kirito1801" target="_blank"><i class="fa fa-facebook" style="font-size: 24px; color:maroon; text-shadow:2px 2px 4px #000000;""></i></a>&nbsp; &nbsp; &nbsp;<a class="gplus" href="https://plus.google.com/u/1/discover" target="_blank"><i class="fa fa-google-plus"  style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a> &nbsp; &nbsp;<a class="youtube" href="https://www.youtube.com/channel/UCWrFW58KlMxaNoDNpTxkI9g?view_as=subscriber" target="_blank"><i class="fa fa-youtube" style="font-size: 24px; color: maroon; text-shadow:2px 2px 4px #000000;""></i></a>
+</footer>
+
+{% endblock %}
