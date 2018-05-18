@@ -3,7 +3,7 @@
 {% block body %}
 <header>
     <h1>
-        Giới thiệu 
+        Giới thiệu bản thân
     </h1>
 </header>
             <hr size="2px" color="red" />
@@ -11,7 +11,7 @@
 <nav>
   <ul>
     <li><a href="http://127.0.0.1:5000/quangtien">Trang chủ</a></li>
-    <li><a href="http://127.0.0.1:5000/Pythonlagi">1. Python là gì?</a></li>
+    <li><a href="http://127.0.0.1:5000/pythonlagi">1. Python là gì?</a></li>
     <li><a href="http://127.0.0.1:5000/caidatpython">2. Cài đặt Python</a></li>
     <li><a href="http://127.0.0.1:5000/helloword">3. Chương trình Hello Word!</a></li>
     <li><a href="http://127.0.0.1:5000/bientrongpython">4. Biến trong Python</a></li>
@@ -24,15 +24,102 @@
 </nav>
 
 <article>
+
     <div class="container">
+     <h2>Log In</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
+    <li data-target="#demo" data-slide-to="6"></li>
+  </ul>
+    <!-- The slideshow -->
+
+  <div class="carousel-inner">
+    <center>
+    <div class="carousel-item active">
+      <img src="https://i.imgur.com/wupamoV.jpg" alt="" width="800" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/EeR1L6v.jpg" alt="" width="400" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/ia8ovWz.jpg" alt="" width="400" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/NlvwiAl.jpg" alt="" width="400" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/SguXfzz.jpg" alt="" width="400" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/pGY1HBn.jpg" alt="" width="700" height="450">
+    </div>
+    </center>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+      <div class="container mt-3">
   <h2>My profile</h2>
-  <div class="card" style="width:600px">
-    <img class="card-img-top" src="https://i.imgur.com/TyvQdhZ.jpg" alt="Card image" style="width:40%">
-    <div class="card-body">
-      <h4 class="card-title">Tạ Quang Tiền</h4>
-      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">See profile</button>
-      <div id="demo" class="collapse">
-          <div  style="text-indent: 2cm;">
+  <div class="media border p-4">
+    <img src="https://i.imgur.com/TyvQdhZ.jpg" alt="Quang Tiền" class="mr-3 mt-3 rounded-circle" style="width:150px;">
+    <div class="media-body">
+      <h4>Tạ Quang Tiền 
+          <div id="div1" class="fa"></div>
+              <script>
+                  function smile() {
+                  var a;
+                  a = document.getElementById("div1");
+                  a.innerHTML = "&#xf118;";
+                  setTimeout(function () {
+                  a.innerHTML = "&#xf11a;";
+                  }, 1000);
+                  setTimeout(function () {
+                  a.innerHTML = "&#xf119;";
+                  }, 2000);
+                  setTimeout(function () {
+                 a.innerHTML = "&#xf11a;";
+                  }, 3000);
+             }
+                  smile();
+                  setInterval(smile, 4000);
+               </script>
+      <small><i>&nbsp;&nbsp;&nbsp;Đăng lên ngày 18/04/2018</i></small></h4>
+          <div  style="text-indent: 1cm;">
               <p>Họ và tên: <i>Tạ Quang Tiền</i></p>
               <p>Ngày tháng năm sinh: <i>18/01/1992</i></p>
               <p>Quê quán: <i>Nghĩa Châu - Nghĩa Hưng - Nam Định</i></p>
@@ -44,13 +131,9 @@
     </div>
   </div>
 
-
-
-        <!-- Thêm đoạn gạch ngang màn hình và thêm màu cho nó -->
-        <hr size="2px" color="red" />
-         <div style="text-indent: 1cm;">
+  <div>
         <h4>Quá trình tiếp xúc ngành lập trình - Python</h4>
-        </div>
+    </div>
         <div style="text-indent: 2cm;">
         <p align="justify">Xin nói trước chuyên ngành học đại học của mình không phải là CNTT mà là CNSH ( Công Nghệ Sinh Học) của trường Viện ĐH Mở HN. Sau 4 năm học và ra trường đi làm thì mình cũng làm đúng chuyên ngành. Mình học từ năm 2010 tới đầu năm 2018 mình bắt đầu được tiếp xúc với "lập trình". Khi đó cũng là do mình đang tím kiếm một công việc khác để làm thì đúng lúc thằng bạn thời đại học cũng đang bắt đầu học về lập trình theo chân ông anh nó quen. Rồi mình cũng bắt đầu học theo nó từ đây.</p>
         <p align="justify">Nó bắt đầu giới thiệu ngôn ngữ lập trình cho mình và đưa mình một số trang web  để học. Các bạn có hiểu cảm giác lúc đó của mình giống như một lão Robinson giữa đảo hoang hoặc như một đứa người Việt lên lớp 6 và bắt đầu tiếp xúc với tiếng anh. Thực sự là nhiều cái khó hiểu vì nó giống như bạn bắt đầu học một ngôn ngữ mới và nó rộng vô vàn.</p>
